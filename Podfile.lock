@@ -1,0 +1,25 @@
+PODS:
+  - Alamofire (2.0.0)
+  - ObjectMapper (0.16)
+  - RAMAnimatedTabBarController (1.0.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - ObjectMapper
+  - RAMAnimatedTabBarController (from `https://github.com/Ramotion/animated-tab-bar.git`)
+
+EXTERNAL SOURCES:
+  RAMAnimatedTabBarController:
+    :git: https://github.com/Ramotion/animated-tab-bar.git
+
+CHECKOUT OPTIONS:
+  RAMAnimatedTabBarController:
+    :commit: ed43b564902d645bba51f5f7abc01f2780e9c290
+    :git: https://github.com/Ramotion/animated-tab-bar.git
+
+SPEC CHECKSUMS:
+  Alamofire: 2f13548b29d25a58ecd91c9225fb51493e2b782b
+  ObjectMapper: 86915ae0d902de94e7bfda8980a580fda931b5f8
+  RAMAnimatedTabBarController: 7cdf1e33614c88020597839a1f304af8165b493f
+
+COCOAPODS: 0.39.0

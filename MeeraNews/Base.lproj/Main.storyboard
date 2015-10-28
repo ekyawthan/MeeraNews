@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sL6-RG-gPu">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Jobs-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="JobVC" customModule="MeeraNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Jobs" image="job_unsel" selectedImage="job_sel" id="FUs-8i-9Ea" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="ToS-qQ-WpE" id="dl6-ic-yiA"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="ToS-qQ-WpE" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="1602" y="1592"/>
+        </scene>
+        <!--Shows-->
+        <scene sceneID="tBw-7M-TFh">
+            <objects>
+                <viewController id="mzu-xG-RXP" userLabel="Shows" customClass="ShowVC" customModule="MeeraNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SIz-ov-xB5"/>
+                        <viewControllerLayoutGuide type="bottom" id="6yi-1o-Oaw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7je-zp-QD7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Shows" image="show_unsel" selectedImage="show_sel" id="Fjt-x5-LEk" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="OlY-nm-Dyu" id="81K-uh-Var"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PfC-go-zbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="OlY-nm-Dyu" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="1634" y="838"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="BjF-X9-Sfh">
+            <objects>
+                <viewController id="3uu-Jb-5aH" userLabel="News" customClass="NewsVC" customModule="MeeraNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MvH-FA-YEj"/>
+                        <viewControllerLayoutGuide type="bottom" id="rRW-hg-rkg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jgl-Tk-YhA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bTj-Z6-QIF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wvB-60-e9H">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wvB-60-e9H" id="HzH-I2-c7P">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bTj-Z6-QIF" firstAttribute="bottom" secondItem="rRW-hg-rkg" secondAttribute="top" id="EYW-2s-ZCO"/>
+                            <constraint firstItem="bTj-Z6-QIF" firstAttribute="leading" secondItem="Jgl-Tk-YhA" secondAttribute="leading" id="Lvk-oN-dzC"/>
+                            <constraint firstItem="bTj-Z6-QIF" firstAttribute="top" secondItem="Jgl-Tk-YhA" secondAttribute="top" id="dx5-jH-SPL"/>
+                            <constraint firstAttribute="trailing" secondItem="bTj-Z6-QIF" secondAttribute="trailing" id="v3B-o7-UJA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="News" image="news_unsel" selectedImage="news_sel" id="kto-0s-cns" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="MKk-Rg-iZK" id="fFZ-gb-dpO"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DtV-i7-IRw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="MKk-Rg-iZK" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="958" y="330"/>
+        </scene>
+        <!--Animated Tab Bar Controller-->
+        <scene sceneID="2zL-1m-dbs">
+            <objects>
+                <tabBarController id="sL6-RG-gPu" customClass="RAMAnimatedTabBarController" customModule="RAMAnimatedTabBarController" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="lJ2-0R-HDv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3uu-Jb-5aH" kind="relationship" relationship="viewControllers" id="cB7-mp-ty9"/>
+                        <segue destination="mzu-xG-RXP" kind="relationship" relationship="viewControllers" id="lwe-p5-Luf"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="eWd-Gl-RPM"/>
+                        <segue destination="Zib-Cb-x9u" kind="relationship" relationship="viewControllers" id="A2h-Q5-6sG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xar-go-Chv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="126" y="1086"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="E41-eS-ixm">
+            <objects>
+                <viewController id="Zib-Cb-x9u" userLabel="Profile" customClass="ProfileVC" customModule="MeeraNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MkV-nE-Vg5"/>
+                        <viewControllerLayoutGuide type="bottom" id="fSP-VJ-zYD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R2U-Y3-pSa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile_unsel" selectedImage="profile_sel" id="7CH-i5-YeF" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="2hh-S1-8l3" id="Fw8-1h-zd0"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xzd-bD-j7F" sceneMemberID="firstResponder"/>
+                <customObject id="2hh-S1-8l3" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="912" y="2328"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="job_sel" width="18" height="25"/>
+        <image name="job_unsel" width="18" height="25"/>
+        <image name="news_sel" width="25" height="26"/>
+        <image name="news_unsel" width="26" height="26"/>
+        <image name="profile_sel" width="23" height="25"/>
+        <image name="profile_unsel" width="23" height="25"/>
+        <image name="show_sel" width="26" height="26"/>
+        <image name="show_unsel" width="26" height="26"/>
+    </resources>
+    <color key="tintColor" red="0.15675151300483145" green="0.55397884402654873" blue="0.19625717174659948" alpha="1" colorSpace="calibratedRGB"/>
+</document>

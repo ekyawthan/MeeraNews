@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50EBEEBF67D49E302DBD1370 /* Pods_MeeraNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EBD6B011B4A211E54641FA /* Pods_MeeraNews.framework */; };
+		55F45F451BE07E0B00242F46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F45F441BE07E0B00242F46 /* AppDelegate.swift */; };
+		55F45F4A1BE07E0B00242F46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F45F481BE07E0B00242F46 /* Main.storyboard */; };
+		55F45F4C1BE07E0B00242F46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F45F4B1BE07E0B00242F46 /* Assets.xcassets */; };
+		55F45F4F1BE07E0B00242F46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F45F4D1BE07E0B00242F46 /* LaunchScreen.storyboard */; };
+		55F45F5A1BE07E0B00242F46 /* MeeraNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F45F591BE07E0B00242F46 /* MeeraNewsTests.swift */; };
+		55F45F651BE07E0B00242F46 /* MeeraNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F45F641BE07E0B00242F46 /* MeeraNewsUITests.swift */; };
+		55F45F761BE07EE800242F46 /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F45F751BE07EE800242F46 /* NewsManager.swift */; };
+		55F45F7B1BE07EF300242F46 /* JobVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F45F771BE07EF300242F46 /* JobVC.swift */; };
+		55F45F7C1BE07EF300242F46 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F45F781BE07EF300242F46 /* NewsVC.swift */; };
+		55F45F7D1BE07EF300242F46 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F45F791BE07EF300242F46 /* ProfileVC.swift */; };
+		55F45F7E1BE07EF300242F46 /* ShowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F45F7A1BE07EF300242F46 /* ShowVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55F45F561BE07E0B00242F46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55F45F391BE07E0B00242F46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55F45F401BE07E0B00242F46;
+			remoteInfo = MeeraNews;
+		};
+		55F45F611BE07E0B00242F46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55F45F391BE07E0B00242F46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55F45F401BE07E0B00242F46;
+			remoteInfo = MeeraNews;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03EC9B7D14B43560DC33E7BE /* Pods-MeeraNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeeraNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeeraNews/Pods-MeeraNews.release.xcconfig"; sourceTree = "<group>"; };
+		19EBD6B011B4A211E54641FA /* Pods_MeeraNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeeraNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55F45F411BE07E0B00242F46 /* MeeraNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeeraNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55F45F441BE07E0B00242F46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55F45F491BE07E0B00242F46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55F45F4B1BE07E0B00242F46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55F45F4E1BE07E0B00242F46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55F45F501BE07E0B00242F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55F45F551BE07E0B00242F46 /* MeeraNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeeraNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55F45F591BE07E0B00242F46 /* MeeraNewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeeraNewsTests.swift; sourceTree = "<group>"; };
+		55F45F5B1BE07E0B00242F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55F45F601BE07E0B00242F46 /* MeeraNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeeraNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55F45F641BE07E0B00242F46 /* MeeraNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeeraNewsUITests.swift; sourceTree = "<group>"; };
+		55F45F661BE07E0B00242F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55F45F751BE07EE800242F46 /* NewsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
+		55F45F771BE07EF300242F46 /* JobVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobVC.swift; sourceTree = "<group>"; };
+		55F45F781BE07EF300242F46 /* NewsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		55F45F791BE07EF300242F46 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		55F45F7A1BE07EF300242F46 /* ShowVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowVC.swift; sourceTree = "<group>"; };
+		76DAFDF05157064A91ED71F6 /* Pods-MeeraNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeeraNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeeraNews/Pods-MeeraNews.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55F45F3E1BE07E0B00242F46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50EBEEBF67D49E302DBD1370 /* Pods_MeeraNews.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55F45F521BE07E0B00242F46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55F45F5D1BE07E0B00242F46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52AA8C0EF8B4B74440CB4FA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76DAFDF05157064A91ED71F6 /* Pods-MeeraNews.debug.xcconfig */,
+				03EC9B7D14B43560DC33E7BE /* Pods-MeeraNews.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		55F45F381BE07E0B00242F46 = {
+			isa = PBXGroup;
+			children = (
+				55F45F431BE07E0B00242F46 /* MeeraNews */,
+				55F45F581BE07E0B00242F46 /* MeeraNewsTests */,
+				55F45F631BE07E0B00242F46 /* MeeraNewsUITests */,
+				55F45F421BE07E0B00242F46 /* Products */,
+				52AA8C0EF8B4B74440CB4FA6 /* Pods */,
+				88E255552B8FE873B1F180F2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		55F45F421BE07E0B00242F46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55F45F411BE07E0B00242F46 /* MeeraNews.app */,
+				55F45F551BE07E0B00242F46 /* MeeraNewsTests.xctest */,
+				55F45F601BE07E0B00242F46 /* MeeraNewsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55F45F431BE07E0B00242F46 /* MeeraNews */ = {
+			isa = PBXGroup;
+			children = (
+				55F45F4D1BE07E0B00242F46 /* LaunchScreen.storyboard */,
+				55F45F741BE07EB700242F46 /* Models */,
+				55F45F731BE07EAF00242F46 /* Views */,
+				55F45F721BE07EA800242F46 /* Controllers */,
+				55F45F441BE07E0B00242F46 /* AppDelegate.swift */,
+				55F45F501BE07E0B00242F46 /* Info.plist */,
+			);
+			path = MeeraNews;
+			sourceTree = "<group>";
+		};
+		55F45F581BE07E0B00242F46 /* MeeraNewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				55F45F591BE07E0B00242F46 /* MeeraNewsTests.swift */,
+				55F45F5B1BE07E0B00242F46 /* Info.plist */,
+			);
+			path = MeeraNewsTests;
+			sourceTree = "<group>";
+		};
+		55F45F631BE07E0B00242F46 /* MeeraNewsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				55F45F641BE07E0B00242F46 /* MeeraNewsUITests.swift */,
+				55F45F661BE07E0B00242F46 /* Info.plist */,
+			);
+			path = MeeraNewsUITests;
+			sourceTree = "<group>";
+		};
+		55F45F721BE07EA800242F46 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				55F45F771BE07EF300242F46 /* JobVC.swift */,
+				55F45F781BE07EF300242F46 /* NewsVC.swift */,
+				55F45F791BE07EF300242F46 /* ProfileVC.swift */,
+				55F45F7A1BE07EF300242F46 /* ShowVC.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		55F45F731BE07EAF00242F46 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				55F45F481BE07E0B00242F46 /* Main.storyboard */,
+				55F45F4B1BE07E0B00242F46 /* Assets.xcassets */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		55F45F741BE07EB700242F46 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				55F45F751BE07EE800242F46 /* NewsManager.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		88E255552B8FE873B1F180F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19EBD6B011B4A211E54641FA /* Pods_MeeraNews.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55F45F401BE07E0B00242F46 /* MeeraNews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55F45F691BE07E0B00242F46 /* Build configuration list for PBXNativeTarget "MeeraNews" */;
+			buildPhases = (
+				548F53DDCA65D9701943DB59 /* Check Pods Manifest.lock */,
+				55F45F3D1BE07E0B00242F46 /* Sources */,
+				55F45F3E1BE07E0B00242F46 /* Frameworks */,
+				55F45F3F1BE07E0B00242F46 /* Resources */,
+				543736CDA8B6CDA6F02CE235 /* Embed Pods Frameworks */,
+				4A5B3C5E1AF08C3529947E1F /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeeraNews;
+			productName = MeeraNews;
+			productReference = 55F45F411BE07E0B00242F46 /* MeeraNews.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55F45F541BE07E0B00242F46 /* MeeraNewsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55F45F6C1BE07E0B00242F46 /* Build configuration list for PBXNativeTarget "MeeraNewsTests" */;
+			buildPhases = (
+				55F45F511BE07E0B00242F46 /* Sources */,
+				55F45F521BE07E0B00242F46 /* Frameworks */,
+				55F45F531BE07E0B00242F46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55F45F571BE07E0B00242F46 /* PBXTargetDependency */,
+			);
+			name = MeeraNewsTests;
+			productName = MeeraNewsTests;
+			productReference = 55F45F551BE07E0B00242F46 /* MeeraNewsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		55F45F5F1BE07E0B00242F46 /* MeeraNewsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55F45F6F1BE07E0B00242F46 /* Build configuration list for PBXNativeTarget "MeeraNewsUITests" */;
+			buildPhases = (
+				55F45F5C1BE07E0B00242F46 /* Sources */,
+				55F45F5D1BE07E0B00242F46 /* Frameworks */,
+				55F45F5E1BE07E0B00242F46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55F45F621BE07E0B00242F46 /* PBXTargetDependency */,
+			);
+			name = MeeraNewsUITests;
+			productName = MeeraNewsUITests;
+			productReference = 55F45F601BE07E0B00242F46 /* MeeraNewsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55F45F391BE07E0B00242F46 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Meera Solution Inc";
+				TargetAttributes = {
+					55F45F401BE07E0B00242F46 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					55F45F541BE07E0B00242F46 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 55F45F401BE07E0B00242F46;
+					};
+					55F45F5F1BE07E0B00242F46 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 55F45F401BE07E0B00242F46;
+					};
+				};
+			};
+			buildConfigurationList = 55F45F3C1BE07E0B00242F46 /* Build configuration list for PBXProject "MeeraNews" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55F45F381BE07E0B00242F46;
+			productRefGroup = 55F45F421BE07E0B00242F46 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55F45F401BE07E0B00242F46 /* MeeraNews */,
+				55F45F541BE07E0B00242F46 /* MeeraNewsTests */,
+				55F45F5F1BE07E0B00242F46 /* MeeraNewsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55F45F3F1BE07E0B00242F46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55F45F4F1BE07E0B00242F46 /* LaunchScreen.storyboard in Resources */,
+				55F45F4C1BE07E0B00242F46 /* Assets.xcassets in Resources */,
+				55F45F4A1BE07E0B00242F46 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55F45F531BE07E0B00242F46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55F45F5E1BE07E0B00242F46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A5B3C5E1AF08C3529947E1F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeeraNews/Pods-MeeraNews-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		543736CDA8B6CDA6F02CE235 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeeraNews/Pods-MeeraNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		548F53DDCA65D9701943DB59 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55F45F3D1BE07E0B00242F46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55F45F7E1BE07EF300242F46 /* ShowVC.swift in Sources */,
+				55F45F7D1BE07EF300242F46 /* ProfileVC.swift in Sources */,
+				55F45F761BE07EE800242F46 /* NewsManager.swift in Sources */,
+				55F45F7B1BE07EF300242F46 /* JobVC.swift in Sources */,
+				55F45F451BE07E0B00242F46 /* AppDelegate.swift in Sources */,
+				55F45F7C1BE07EF300242F46 /* NewsVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55F45F511BE07E0B00242F46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55F45F5A1BE07E0B00242F46 /* MeeraNewsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55F45F5C1BE07E0B00242F46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55F45F651BE07E0B00242F46 /* MeeraNewsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55F45F571BE07E0B00242F46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55F45F401BE07E0B00242F46 /* MeeraNews */;
+			targetProxy = 55F45F561BE07E0B00242F46 /* PBXContainerItemProxy */;
+		};
+		55F45F621BE07E0B00242F46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55F45F401BE07E0B00242F46 /* MeeraNews */;
+			targetProxy = 55F45F611BE07E0B00242F46 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55F45F481BE07E0B00242F46 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55F45F491BE07E0B00242F46 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55F45F4D1BE07E0B00242F46 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55F45F4E1BE07E0B00242F46 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55F45F671BE07E0B00242F46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55F45F681BE07E0B00242F46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55F45F6A1BE07E0B00242F46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76DAFDF05157064A91ED71F6 /* Pods-MeeraNews.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MeeraNews/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = meera.solution.in.MeeraNews;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		55F45F6B1BE07E0B00242F46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03EC9B7D14B43560DC33E7BE /* Pods-MeeraNews.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MeeraNews/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = meera.solution.in.MeeraNews;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		55F45F6D1BE07E0B00242F46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MeeraNewsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = meera.solution.in.MeeraNewsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeeraNews.app/MeeraNews";
+			};
+			name = Debug;
+		};
+		55F45F6E1BE07E0B00242F46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MeeraNewsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = meera.solution.in.MeeraNewsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeeraNews.app/MeeraNews";
+			};
+			name = Release;
+		};
+		55F45F701BE07E0B00242F46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MeeraNewsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = meera.solution.in.MeeraNewsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MeeraNews;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		55F45F711BE07E0B00242F46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MeeraNewsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = meera.solution.in.MeeraNewsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MeeraNews;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55F45F3C1BE07E0B00242F46 /* Build configuration list for PBXProject "MeeraNews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55F45F671BE07E0B00242F46 /* Debug */,
+				55F45F681BE07E0B00242F46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55F45F691BE07E0B00242F46 /* Build configuration list for PBXNativeTarget "MeeraNews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55F45F6A1BE07E0B00242F46 /* Debug */,
+				55F45F6B1BE07E0B00242F46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55F45F6C1BE07E0B00242F46 /* Build configuration list for PBXNativeTarget "MeeraNewsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55F45F6D1BE07E0B00242F46 /* Debug */,
+				55F45F6E1BE07E0B00242F46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55F45F6F1BE07E0B00242F46 /* Build configuration list for PBXNativeTarget "MeeraNewsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55F45F701BE07E0B00242F46 /* Debug */,
+				55F45F711BE07E0B00242F46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55F45F391BE07E0B00242F46 /* Project object */;
+}
