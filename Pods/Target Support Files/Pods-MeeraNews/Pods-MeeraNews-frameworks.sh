@@ -85,11 +85,19 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-MeeraNews/Alamofire.framework"
+  install_framework "Pods-MeeraNews/DGElasticPullToRefresh.framework"
+  install_framework "Pods-MeeraNews/Magic.framework"
   install_framework "Pods-MeeraNews/ObjectMapper.framework"
   install_framework "Pods-MeeraNews/RAMAnimatedTabBarController.framework"
+  install_framework "Pods-MeeraNews/SwiftMoment.framework"
+  install_framework "Pods-MeeraNews/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-MeeraNews/Alamofire.framework"
+  install_framework "Pods-MeeraNews/DGElasticPullToRefresh.framework"
+  install_framework "Pods-MeeraNews/Magic.framework"
   install_framework "Pods-MeeraNews/ObjectMapper.framework"
   install_framework "Pods-MeeraNews/RAMAnimatedTabBarController.framework"
+  install_framework "Pods-MeeraNews/SwiftMoment.framework"
+  install_framework "Pods-MeeraNews/SwiftyJSON.framework"
 fi

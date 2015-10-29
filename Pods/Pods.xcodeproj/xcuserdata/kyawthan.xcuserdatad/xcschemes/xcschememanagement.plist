@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DGElasticPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Magic.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,15 +34,35 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftMoment.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>12CD0FD34417A4805F65E5B960A29DD0</key>
+		<key>115824B7CB2E76E5ACB836A251E79404</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>20B4B9A7C2D6F7900B6D85DBB305D9E6</key>
+		<key>118A824E0A535860503A5E1A4DCAE602</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>21E4EF509414FB46574DBEE5031A3AAA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3ECE3EC472AED3B7A40B4E1F05B035D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +72,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>87B78BA530CFB8FE499FA8CABCA65DE2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8C4DF38703AAA99149FEB0E4138D4552</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9EEC94986DCDA86579B0404FE2E1A5B0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Jobs-->
@@ -72,15 +73,94 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wvB-60-e9H">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCellWithoutImage" rowHeight="140" id="wvB-60-e9H" customClass="TopStoryCell" customModule="MeeraNews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wvB-60-e9H" id="HzH-I2-c7P">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="139.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvf-ET-HtT">
+                                                    <rect key="frame" x="8" y="8" width="584" height="78"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <color key="textColor" red="0.52457826327433632" green="0.52457826327433632" blue="0.52457826327433632" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQf-FO-rgX">
+                                                    <rect key="frame" x="8" y="94" width="584" height="17"/>
+                                                    <animations/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Microsoft surface out beat mac pro ....">
+                                                            <attributes>
+                                                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <font key="NSFont" size="18" name="PTSerif-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrT-dB-eRZ">
+                                                    <rect key="frame" x="8" y="114.5" width="290" height="16.5"/>
+                                                    <animations/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="29 points">
+                                                            <attributes>
+                                                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="END-RZ-CLs">
+                                                    <rect key="frame" x="302" y="115" width="290" height="15.5"/>
+                                                    <animations/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="49 comments">
+                                                            <attributes>
+                                                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="leadingMargin" secondItem="Uvf-ET-HtT" secondAttribute="leading" id="0hP-ym-8Np"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rrT-dB-eRZ" secondAttribute="bottom" constant="0.5" id="C7q-vZ-fyf"/>
+                                                <constraint firstItem="END-RZ-CLs" firstAttribute="centerY" secondItem="rrT-dB-eRZ" secondAttribute="centerY" id="DMQ-Bb-CWr"/>
+                                                <constraint firstItem="END-RZ-CLs" firstAttribute="width" secondItem="rrT-dB-eRZ" secondAttribute="width" id="DfO-dk-eCy"/>
+                                                <constraint firstItem="END-RZ-CLs" firstAttribute="leading" secondItem="rrT-dB-eRZ" secondAttribute="trailing" constant="4" id="FNO-jp-kmJ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="END-RZ-CLs" secondAttribute="bottom" constant="0.5" id="Fmi-d8-fpJ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Uvf-ET-HtT" secondAttribute="trailing" id="Jus-HF-VrU"/>
+                                                <constraint firstItem="END-RZ-CLs" firstAttribute="bottom" secondItem="rrT-dB-eRZ" secondAttribute="bottom" id="Kd3-bW-RQQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eQf-FO-rgX" secondAttribute="trailing" id="S6F-gT-gTo"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="rrT-dB-eRZ" secondAttribute="leading" id="TdP-5U-iz2"/>
+                                                <constraint firstItem="END-RZ-CLs" firstAttribute="top" secondItem="eQf-FO-rgX" secondAttribute="bottom" constant="4" id="Yxo-0x-R4a"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="eQf-FO-rgX" secondAttribute="leading" id="asd-5C-iwz"/>
+                                                <constraint firstItem="END-RZ-CLs" firstAttribute="height" secondItem="rrT-dB-eRZ" secondAttribute="height" id="gEs-go-j42"/>
+                                                <constraint firstItem="eQf-FO-rgX" firstAttribute="top" secondItem="Uvf-ET-HtT" secondAttribute="bottom" constant="8" id="qaL-Bn-MOc"/>
+                                                <constraint firstAttribute="topMargin" secondItem="Uvf-ET-HtT" secondAttribute="top" id="yzE-Af-edQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="END-RZ-CLs" secondAttribute="trailing" id="zV7-Bc-ocG"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Kd3-bW-RQQ"/>
+                                                    <exclude reference="gEs-go-j42"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <outlet property="numberOfComments" destination="END-RZ-CLs" id="Ny3-i1-Yef"/>
+                                            <outlet property="numberOfPoint" destination="rrT-dB-eRZ" id="n2h-T1-JQv"/>
+                                            <outlet property="owenerAndcreated" destination="Uvf-ET-HtT" id="1YH-sc-Qxo"/>
+                                            <outlet property="title" destination="eQf-FO-rgX" id="Ia0-sX-xxn"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -99,6 +179,9 @@
                             <outlet property="animation" destination="MKk-Rg-iZK" id="fFZ-gb-dpO"/>
                         </connections>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="topNewsTableView" destination="bTj-Z6-QIF" id="Npz-yk-v8d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DtV-i7-IRw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="MKk-Rg-iZK" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController"/>

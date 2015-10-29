@@ -1,25 +1,52 @@
 PODS:
   - Alamofire (2.0.0)
+  - DGElasticPullToRefresh (1.0.2)
+  - Magic (2.0.0)
   - ObjectMapper (0.16)
   - RAMAnimatedTabBarController (1.0.2)
+  - SwiftMoment (0.2)
+  - SwiftyJSON (2.3.1)
 
 DEPENDENCIES:
   - Alamofire
+  - DGElasticPullToRefresh (from `https://github.com/gontovnik/DGElasticPullToRefresh.git`)
+  - Magic
   - ObjectMapper
   - RAMAnimatedTabBarController (from `https://github.com/Ramotion/animated-tab-bar.git`)
+  - SwiftMoment (from `https://github.com/akosma/SwiftMoment.git`)
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
 EXTERNAL SOURCES:
+  DGElasticPullToRefresh:
+    :git: https://github.com/gontovnik/DGElasticPullToRefresh.git
   RAMAnimatedTabBarController:
     :git: https://github.com/Ramotion/animated-tab-bar.git
+  SwiftMoment:
+    :git: https://github.com/akosma/SwiftMoment.git
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 CHECKOUT OPTIONS:
+  DGElasticPullToRefresh:
+    :commit: c6f6485803b4d7465d5f515c6edff375b065f608
+    :git: https://github.com/gontovnik/DGElasticPullToRefresh.git
   RAMAnimatedTabBarController:
     :commit: ed43b564902d645bba51f5f7abc01f2780e9c290
     :git: https://github.com/Ramotion/animated-tab-bar.git
+  SwiftMoment:
+    :commit: 670183f460430780cd16e97311f01274df8c4569
+    :git: https://github.com/akosma/SwiftMoment.git
+  SwiftyJSON:
+    :commit: 5f5d00dbdcd256600a250765d9f674964080ceee
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
   Alamofire: 2f13548b29d25a58ecd91c9225fb51493e2b782b
+  DGElasticPullToRefresh: 49cc35f3509b46a58a8f45ae0165d0a8e0feccea
+  Magic: f05ea8d27da5413cd780266ff0152bb9c028bfa9
   ObjectMapper: 86915ae0d902de94e7bfda8980a580fda931b5f8
   RAMAnimatedTabBarController: 7cdf1e33614c88020597839a1f304af8165b493f
+  SwiftMoment: b1bf1b5708b4bc99db47697e32683430d7c19759
+  SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
 
 COCOAPODS: 0.39.0
