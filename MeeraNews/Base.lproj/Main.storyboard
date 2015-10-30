@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Jobs-->
+        <!--Job-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="JobVC" customModule="MeeraNews" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,16 +20,12 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Jobs" image="job_unsel" selectedImage="job_sel" id="FUs-8i-9Ea" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
-                        <connections>
-                            <outlet property="animation" destination="ToS-qQ-WpE" id="dl6-ic-yiA"/>
-                        </connections>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Job" id="7D7-Y3-6lc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="ToS-qQ-WpE" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
-            <point key="canvasLocation" x="1602" y="1592"/>
+            <point key="canvasLocation" x="1902" y="1964"/>
         </scene>
         <!--Shows-->
         <scene sceneID="tBw-7M-TFh">
@@ -45,16 +41,12 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Shows" image="show_unsel" selectedImage="show_sel" id="Fjt-x5-LEk" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
-                        <connections>
-                            <outlet property="animation" destination="OlY-nm-Dyu" id="81K-uh-Var"/>
-                        </connections>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Shows" id="wvf-wh-667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PfC-go-zbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="OlY-nm-Dyu" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
-            <point key="canvasLocation" x="1634" y="838"/>
+            <point key="canvasLocation" x="1814" y="1166"/>
         </scene>
         <!--News-->
         <scene sceneID="BjF-X9-Sfh">
@@ -74,7 +66,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCellWithoutImage" rowHeight="140" id="wvB-60-e9H" customClass="TopStoryCell" customModule="MeeraNews" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="140"/>
+                                        <rect key="frame" x="0.0" y="92" width="600" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wvB-60-e9H" id="HzH-I2-c7P">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="139.5"/>
@@ -174,11 +166,7 @@
                             <constraint firstAttribute="trailing" secondItem="bTj-Z6-QIF" secondAttribute="trailing" id="v3B-o7-UJA"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News" image="news_unsel" selectedImage="news_sel" id="kto-0s-cns" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
-                        <connections>
-                            <outlet property="animation" destination="MKk-Rg-iZK" id="fFZ-gb-dpO"/>
-                        </connections>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="News" id="D9E-w2-2XV"/>
                     <connections>
                         <outlet property="topNewsTableView" destination="bTj-Z6-QIF" id="Npz-yk-v8d"/>
                     </connections>
@@ -186,7 +174,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DtV-i7-IRw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="MKk-Rg-iZK" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
-            <point key="canvasLocation" x="958" y="330"/>
+            <point key="canvasLocation" x="1770" y="330"/>
         </scene>
         <!--Animated Tab Bar Controller-->
         <scene sceneID="2zL-1m-dbs">
@@ -199,10 +187,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="3uu-Jb-5aH" kind="relationship" relationship="viewControllers" id="cB7-mp-ty9"/>
-                        <segue destination="mzu-xG-RXP" kind="relationship" relationship="viewControllers" id="lwe-p5-Luf"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="eWd-Gl-RPM"/>
-                        <segue destination="Zib-Cb-x9u" kind="relationship" relationship="viewControllers" id="A2h-Q5-6sG"/>
+                        <segue destination="AOT-cp-kVV" kind="relationship" relationship="viewControllers" id="cB7-mp-ty9"/>
+                        <segue destination="PFk-08-55W" kind="relationship" relationship="viewControllers" id="lwe-p5-Luf"/>
+                        <segue destination="QHl-Av-xUU" kind="relationship" relationship="viewControllers" id="eWd-Gl-RPM"/>
+                        <segue destination="IdX-xM-ncQ" kind="relationship" relationship="viewControllers" id="A2h-Q5-6sG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xar-go-Chv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -223,16 +211,116 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="profile_unsel" selectedImage="profile_sel" id="7CH-i5-YeF" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
-                        <connections>
-                            <outlet property="animation" destination="2hh-S1-8l3" id="Fw8-1h-zd0"/>
-                        </connections>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Profile" id="GZ4-Q8-eTV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xzd-bD-j7F" sceneMemberID="firstResponder"/>
                 <customObject id="2hh-S1-8l3" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
-            <point key="canvasLocation" x="912" y="2328"/>
+            <point key="canvasLocation" x="1796" y="3016"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="eGh-JJ-kM6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AOT-cp-kVV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News" image="news_unsel" selectedImage="news_sel" id="kto-0s-cns" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="6Mv-Ei-5fk" id="mpU-5F-e4e"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kbt-hH-8od">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" red="1" green="0.3985741138458252" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3uu-Jb-5aH" kind="relationship" relationship="rootViewController" id="kUe-m9-nYF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uym-hw-4a2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="6Mv-Ei-5fk" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="958" y="330"/>
+        </scene>
+        <!--Shows-->
+        <scene sceneID="vDJ-Ii-h4z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PFk-08-55W" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Shows" image="show_unsel" selectedImage="show_sel" id="Fjt-x5-LEk" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="gxu-Oi-8Sw" id="Y2n-ht-NVA"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9BE-44-FJJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" red="1" green="0.3985741138458252" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mzu-xG-RXP" kind="relationship" relationship="rootViewController" id="1qA-0Q-zw2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kND-kg-K6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="gxu-Oi-8Sw" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="1018" y="1110"/>
+        </scene>
+        <!--JobNavigation-->
+        <scene sceneID="E8I-zz-QxC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QHl-Av-xUU" userLabel="JobNavigation" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Jobs" image="job_unsel" selectedImage="job_sel" id="FUs-8i-9Ea" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="zlv-ef-Bkd" id="ywv-I1-ilP"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xfh-EP-hDE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" red="1" green="0.3985741138458252" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="noy-lr-9a7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wml-pB-CyD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="zlv-ef-Bkd" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="1106" y="1852"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="hrn-dv-ZU5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IdX-xM-ncQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile_unsel" selectedImage="profile_sel" id="7CH-i5-YeF" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="WKU-dd-uKV" id="hZb-UV-gdR"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ti0-gg-zD6" userLabel="ProfileNavigation">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" red="1" green="0.3985741138458252" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zib-Cb-x9u" kind="relationship" relationship="rootViewController" id="lCC-bu-GXB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UkZ-5h-03O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="WKU-dd-uKV" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="944" y="2920"/>
         </scene>
     </scenes>
     <resources>

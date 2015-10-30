@@ -20,6 +20,9 @@
 		55F45F7D1BE07EF300242F46 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F45F791BE07EF300242F46 /* ProfileVC.swift */; };
 		55F45F7E1BE07EF300242F46 /* ShowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F45F7A1BE07EF300242F46 /* ShowVC.swift */; };
 		55F45F821BE1946E00242F46 /* TopStoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F45F811BE1946E00242F46 /* TopStoryCell.swift */; };
+		55F45FBE1BE31F3400242F46 /* JobsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F45FBD1BE31F3400242F46 /* JobsManager.swift */; };
+		55F45FC01BE31F6100242F46 /* ShowsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F45FBF1BE31F6100242F46 /* ShowsManager.swift */; };
+		55F45FC21BE31F8C00242F46 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F45FC11BE31F8C00242F46 /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		55F45F791BE07EF300242F46 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		55F45F7A1BE07EF300242F46 /* ShowVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowVC.swift; sourceTree = "<group>"; };
 		55F45F811BE1946E00242F46 /* TopStoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopStoryCell.swift; sourceTree = "<group>"; };
+		55F45FBD1BE31F3400242F46 /* JobsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsManager.swift; sourceTree = "<group>"; };
+		55F45FBF1BE31F6100242F46 /* ShowsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsManager.swift; sourceTree = "<group>"; };
+		55F45FC11BE31F8C00242F46 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		76DAFDF05157064A91ED71F6 /* Pods-MeeraNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeeraNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeeraNews/Pods-MeeraNews.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +182,9 @@
 			isa = PBXGroup;
 			children = (
 				55F45F751BE07EE800242F46 /* NewsManager.swift */,
+				55F45FBD1BE31F3400242F46 /* JobsManager.swift */,
+				55F45FBF1BE31F6100242F46 /* ShowsManager.swift */,
+				55F45FC11BE31F8C00242F46 /* UserManager.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -383,7 +392,10 @@
 				55F45F761BE07EE800242F46 /* NewsManager.swift in Sources */,
 				55F45F7B1BE07EF300242F46 /* JobVC.swift in Sources */,
 				55F45F451BE07E0B00242F46 /* AppDelegate.swift in Sources */,
+				55F45FC01BE31F6100242F46 /* ShowsManager.swift in Sources */,
+				55F45FBE1BE31F3400242F46 /* JobsManager.swift in Sources */,
 				55F45F7C1BE07EF300242F46 /* NewsVC.swift in Sources */,
+				55F45FC21BE31F8C00242F46 /* UserManager.swift in Sources */,
 				55F45F821BE1946E00242F46 /* TopStoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

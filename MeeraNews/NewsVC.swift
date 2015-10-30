@@ -28,18 +28,20 @@ class NewsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationController!.navigationBar.titleTextAttributes = titleDict as! [String : AnyObject]
         
         self.topNewsTableView.dataSource = self
         self.topNewsTableView.delegate = self
         self.topNewsTableView.rowHeight = UITableViewAutomaticDimension
         self.topNewsTableView.estimatedRowHeight = 140
         let loadingView = DGElasticPullToRefreshLoadingViewCircle()
-        loadingView.tintColor = UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0)
-        topNewsTableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
-            self?.topNewsTableView.dg_stopLoading()
-            self?.topNewsTableView.reloadData()
+        loadingView.tintColor = UIColor(red: 255/255.0, green: 102/255.0, blue: 0/255.0, alpha: 1.0)
+        topNewsTableView.dg_addPullToRefreshWithActionHandler({   () -> Void in
+            self.topNewsTableView.dg_stopLoading()
+            self.topNewsTableView.reloadData()
          })
-        topNewsTableView.dg_setPullToRefreshFillColor(UIColor(red: 57/255.0, green: 67/255.0, blue: 89/255.0, alpha: 1.0))
+        topNewsTableView.dg_setPullToRefreshFillColor(UIColor(red: 255/255.0, green: 102/255.0, blue: 0/255.0, alpha: 1.0))
         topNewsTableView.dg_setPullToRefreshBackgroundColor(topNewsTableView.backgroundColor!)
         
         
