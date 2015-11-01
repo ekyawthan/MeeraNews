@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>DGElasticPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Kanna.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -19,7 +29,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>NVActivityIndicatorView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -30,6 +50,11 @@
 			<false/>
 		</dict>
 		<key>RAMAnimatedTabBarController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ReachabilitySwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,17 +77,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>118A824E0A535860503A5E1A4DCAE602</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>21E4EF509414FB46574DBEE5031A3AAA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3ECE3EC472AED3B7A40B4E1F05B035D2</key>
+		<key>46A5DE0A4280FA63F2400C0644C38FF5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +87,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>87B78BA530CFB8FE499FA8CABCA65DE2</key>
+		<key>708E01B006A9F88B3C13711562282B5E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>822045A63333739F45E54D270B6248C5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>895612ECE758E9EBBD878EB57F3A2477</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,7 +107,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9E26363B73022A679DE4E50CFF38138A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9EEC94986DCDA86579B0404FE2E1A5B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C5B130CFF96F096F652D658808C174B2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C9D4FC636433B837414659AA32997325</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1C781A656AA9BD286F44BC0E86636A9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E13E6229888207E254BB7DBD4514FDC9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

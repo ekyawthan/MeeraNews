@@ -7,29 +7,94 @@
 //
 
 import UIKit
+import Magic
 
 class JobVC: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    enum JobVCCellIdentifier : String {
+        case jobCell = "jobListCell"
     }
     
+    var jobData = [Int]()
 
-    /*
-    // MARK: - Navigation
+    @IBOutlet weak var jobTableview: UITableView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationController!.navigationBar.titleTextAttributes = titleDict as? [String : AnyObject]
+        
+        jobTableview.delegate = self
+        jobTableview.dataSource = self
+        jobTableview.rowHeight = UITableViewAutomaticDimension
+        jobTableview.estimatedRowHeight = 60
+        
+        JobsManager.getJobLists {
+            data , error in
+            
+            if nil != error {
+                
+            }
+            if nil != data {
+                magic(data)
+                self.jobData = data as! [Int]
+                self.jobTableview.reloadData()
+                
+                
+            }
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
+
+    
 
 }
+
+
+extension JobVC : UITableViewDelegate, UITableViewDataSource {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return jobData.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(JobVCCellIdentifier.jobCell.rawValue, forIndexPath: indexPath) as! JobTableviewCell
+        JobsManager.getDetailOnAJob(jobData[indexPath.row]) {
+            data, error in
+            cell.jobTitle.text = data!["title"].string ?? "Title Not Found!!"
+            
+            
+        }
+    
+        return cell
+    }
+}
+
+class JobTableviewCell : UITableViewCell {
+    
+    @IBOutlet weak var uploadTime: UILabel!
+    
+    @IBOutlet weak var jobTitle: UILabel!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    @IBOutlet weak var didClickApplyJob: UIButton!
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

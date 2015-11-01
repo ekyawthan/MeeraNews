@@ -85,19 +85,29 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-MeeraNews/Alamofire.framework"
+  install_framework "Pods-MeeraNews/Bolts.framework"
   install_framework "Pods-MeeraNews/DGElasticPullToRefresh.framework"
+  install_framework "Pods-MeeraNews/Kanna.framework"
   install_framework "Pods-MeeraNews/Magic.framework"
+  install_framework "Pods-MeeraNews/NVActivityIndicatorView.framework"
   install_framework "Pods-MeeraNews/ObjectMapper.framework"
+  install_framework "Pods-MeeraNews/Parse.framework"
   install_framework "Pods-MeeraNews/RAMAnimatedTabBarController.framework"
+  install_framework "Pods-MeeraNews/ReachabilitySwift.framework"
   install_framework "Pods-MeeraNews/SwiftMoment.framework"
   install_framework "Pods-MeeraNews/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-MeeraNews/Alamofire.framework"
+  install_framework "Pods-MeeraNews/Bolts.framework"
   install_framework "Pods-MeeraNews/DGElasticPullToRefresh.framework"
+  install_framework "Pods-MeeraNews/Kanna.framework"
   install_framework "Pods-MeeraNews/Magic.framework"
+  install_framework "Pods-MeeraNews/NVActivityIndicatorView.framework"
   install_framework "Pods-MeeraNews/ObjectMapper.framework"
+  install_framework "Pods-MeeraNews/Parse.framework"
   install_framework "Pods-MeeraNews/RAMAnimatedTabBarController.framework"
+  install_framework "Pods-MeeraNews/ReachabilitySwift.framework"
   install_framework "Pods-MeeraNews/SwiftMoment.framework"
   install_framework "Pods-MeeraNews/SwiftyJSON.framework"
 fi

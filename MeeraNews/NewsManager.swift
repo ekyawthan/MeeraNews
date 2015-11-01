@@ -11,7 +11,6 @@ import Alamofire
 import ObjectMapper
 import SwiftyJSON
 
-
 class NewsManager {
     
     class func getTopStories(completeHandler : (response : AnyObject?, error : ErrorType?) -> ()) {

@@ -13,15 +13,17 @@ import DGElasticPullToRefresh
 import SwiftMoment
 import SafariServices
 import RAMAnimatedTabBarController
+import Parse
+
 
 class NewsVC: UIViewController {
-    
-    
     
     enum NewsVCTableCellType : String {
         case CellWithImage = "newsCellWithImage"
         case cellWithoutImage = "newsCellWithoutImage"
     }
+    
+    var localCachesTopStory : [Int : JSON] = Dictionary<Int , JSON>()
     
     @IBOutlet weak var topNewsTableView: UITableView!
     var dataTopStory : [Int] = []
@@ -29,7 +31,7 @@ class NewsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        self.navigationController!.navigationBar.titleTextAttributes = titleDict as! [String : AnyObject]
+        self.navigationController!.navigationBar.titleTextAttributes = titleDict as? [String : AnyObject]
         
         self.topNewsTableView.dataSource = self
         self.topNewsTableView.delegate = self
@@ -39,24 +41,37 @@ class NewsVC: UIViewController {
         loadingView.tintColor = UIColor(red: 255/255.0, green: 102/255.0, blue: 0/255.0, alpha: 1.0)
         topNewsTableView.dg_addPullToRefreshWithActionHandler({   () -> Void in
             self.topNewsTableView.dg_stopLoading()
-            self.topNewsTableView.reloadData()
+            self.getTopStoryFromHackerNews()
          })
         topNewsTableView.dg_setPullToRefreshFillColor(UIColor(red: 255/255.0, green: 102/255.0, blue: 0/255.0, alpha: 1.0))
         topNewsTableView.dg_setPullToRefreshBackgroundColor(topNewsTableView.backgroundColor!)
         
+     getTopStoryFromHackerNews()
+        
+   
+
+    }
+    
+    
+    private func getTopStoryFromHackerNews() {
         
         NewsManager.getTopStories {[unowned self]
             data , erorr in
             if let _ = data {
-                magic("did recieved")
+                self.localCachesTopStory = Dictionary<Int, JSON>()
+                
+                
                 self.dataTopStory = data as! [Int]
                 self.topNewsTableView.reloadData()
-            
+                
             }
             
         }
-
+        
     }
+    
+   
+    
 
 
 }
@@ -70,18 +85,31 @@ extension NewsVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(NewsVCTableCellType.cellWithoutImage.rawValue, forIndexPath: indexPath) as! TopStoryCell
         let newsID = dataTopStory[indexPath.row]
-        NewsManager.getDetailonTopStory(newsID) {
-            data , error in
-            if let  _ = data {
-                let json = JSON(data!)
-                cell.title.text = json["title"].stringValue
-                cell.numberOfPoint.text = "\(json["score"].intValue) Points"
-                cell.numberOfComments.text = "\(json["descendants"].intValue) comments"
-                cell.url = json["url"].stringValue
-                //moment().subtract(moejson["time"].doubleValue)
-                magic(moment(NSDate(timeIntervalSince1970: json["time"].doubleValue)))
+        
+        if localCachesTopStory[indexPath.row] != nil {
+            magic("existed at local")
+            let model = localCachesTopStory[indexPath.row]
+            cell.title.text = model!["title"].string ?? "Can not found Title"
+            cell.numberOfComments.text = "\(model![""].int ?? 0) comments"
+            cell.numberOfPoint.text = "\(model!["descendants"].int ?? 0) points"
+            cell.url = model!["url"].string ?? "url not found"
+        }else {
+            NewsManager.getDetailonTopStory(newsID) {
+                data , error in
+                if let  _ = data {
+                    let json = JSON(data!)
+                    cell.title.text = json["title"].stringValue
+                    cell.numberOfPoint.text = "\(json["score"].intValue) Points"
+                    cell.numberOfComments.text = "\(json["descendants"].intValue) comments"
+                    cell.url = json["url"].stringValue
+                    //moment().subtract(moejson["time"].doubleValue)
+                    magic(moment(NSDate(timeIntervalSince1970: json["time"].doubleValue)))
+                    self.localCachesTopStory[indexPath.row] = json
+                }
             }
+            
         }
+        
         return cell
     }
     

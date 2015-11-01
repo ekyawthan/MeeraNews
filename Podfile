@@ -7,8 +7,14 @@ target 'MeeraNews' do
     	pod 'ObjectMapper'
 	pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 	pod 'Magic'
+    pod 'Kanna', :git => 'https://github.com/tid-kijyun/Kanna.git'
+    pod 'ReachabilitySwift', git: 'https://github.com/ashleymills/Reachability.swift'
+
 	pod "DGElasticPullToRefresh", :git => 'https://github.com/gontovnik/DGElasticPullToRefresh.git'
 	pod 'SwiftMoment', :git => 'https://github.com/akosma/SwiftMoment.git'
+     pod 'Parse'
+     pod 'NVActivityIndicatorView', :git => 'https://github.com/ninjaprox/NVActivityIndicatorView.git'
+
 
 end
 

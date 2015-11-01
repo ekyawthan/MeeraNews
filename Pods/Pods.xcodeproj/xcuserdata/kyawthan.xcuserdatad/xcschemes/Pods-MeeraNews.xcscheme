@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4D4FD59EEDD07DCD79FBA238'
+               BlueprintIdentifier = '3C25B6266DCD727430CE9856'
                BlueprintName = 'Pods-MeeraNews'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_MeeraNews.framework'>
