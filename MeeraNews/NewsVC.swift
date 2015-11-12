@@ -14,6 +14,7 @@ import SwiftMoment
 import SafariServices
 import RAMAnimatedTabBarController
 import Parse
+import NVActivityIndicatorView
 
 
 class NewsVC: UIViewController {
@@ -27,6 +28,9 @@ class NewsVC: UIViewController {
     
     @IBOutlet weak var topNewsTableView: UITableView!
     var dataTopStory : [Int] = []
+    
+    var loadingActivityIndicator : NVActivityIndicatorView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,15 +50,21 @@ class NewsVC: UIViewController {
         topNewsTableView.dg_setPullToRefreshFillColor(UIColor(red: 255/255.0, green: 102/255.0, blue: 0/255.0, alpha: 1.0))
         topNewsTableView.dg_setPullToRefreshBackgroundColor(topNewsTableView.backgroundColor!)
         
+        loadingActivityIndicator = NVActivityIndicatorView(frame: CGRectMake(0, 0, 100, 100), type: .LineScale, color: UIColor.redColor())
+        loadingActivityIndicator.center = self.view.center
+        self.view.addSubview(loadingActivityIndicator)
+        
      getTopStoryFromHackerNews()
         
+        
    
-
+        
+       
     }
     
     
     private func getTopStoryFromHackerNews() {
-        
+        showLoading()
         NewsManager.getTopStories {[unowned self]
             data , erorr in
             if let _ = data {
@@ -63,11 +73,24 @@ class NewsVC: UIViewController {
                 
                 self.dataTopStory = data as! [Int]
                 self.topNewsTableView.reloadData()
-                
+                self.hideLoading()
             }
             
         }
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let name = "Pattern~ Home"
+       
+        let tracker = GAI.sharedInstance().defaultTracker
+        tracker.set(kGAIScreenName, value: name)
+        
+        let builder = GAIDictionaryBuilder.createScreenView()
+        tracker.send(builder.build() as [NSObject : AnyObject])
+        // [END screen_view_hit_swift]
     }
     
    
@@ -149,4 +172,19 @@ extension NewsVC : UITabBarControllerDelegate {
         }
     }
     
+}
+
+extension NewsVC {
+    func showLoading() {
+        loadingActivityIndicator.hidden = false
+        self.topNewsTableView.alpha = 0.4
+        loadingActivityIndicator.startAnimation()
+        
+    }
+    func hideLoading() {
+         self.topNewsTableView.alpha = 1.0
+        loadingActivityIndicator.stopAnimation()
+        loadingActivityIndicator.hidden = true
+        
+    }
 }

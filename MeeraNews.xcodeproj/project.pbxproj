@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		50EBEEBF67D49E302DBD1370 /* Pods_MeeraNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EBD6B011B4A211E54641FA /* Pods_MeeraNews.framework */; };
+		5513A9461BF2B96800F23686 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5513A9451BF2B96800F23686 /* GoogleService-Info.plist */; };
 		55F45F451BE07E0B00242F46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F45F441BE07E0B00242F46 /* AppDelegate.swift */; };
 		55F45F4A1BE07E0B00242F46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F45F481BE07E0B00242F46 /* Main.storyboard */; };
 		55F45F4C1BE07E0B00242F46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F45F4B1BE07E0B00242F46 /* Assets.xcassets */; };
@@ -45,6 +46,8 @@
 /* Begin PBXFileReference section */
 		03EC9B7D14B43560DC33E7BE /* Pods-MeeraNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeeraNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeeraNews/Pods-MeeraNews.release.xcconfig"; sourceTree = "<group>"; };
 		19EBD6B011B4A211E54641FA /* Pods_MeeraNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeeraNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5513A9451BF2B96800F23686 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5513A9471BF2C08C00F23686 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		55F45F411BE07E0B00242F46 /* MeeraNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeeraNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F45F441BE07E0B00242F46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55F45F491BE07E0B00242F46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -134,7 +137,9 @@
 				55F45F731BE07EAF00242F46 /* Views */,
 				55F45F721BE07EA800242F46 /* Controllers */,
 				55F45F441BE07E0B00242F46 /* AppDelegate.swift */,
+				5513A9451BF2B96800F23686 /* GoogleService-Info.plist */,
 				55F45F501BE07E0B00242F46 /* Info.plist */,
+				5513A9471BF2C08C00F23686 /* Header.h */,
 			);
 			path = MeeraNews;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				TargetAttributes = {
 					55F45F401BE07E0B00242F46 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 982V6XFKZ3;
 					};
 					55F45F541BE07E0B00242F46 = {
 						CreatedOnToolsVersion = 7.1;
@@ -313,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55F45F4F1BE07E0B00242F46 /* LaunchScreen.storyboard in Resources */,
+				5513A9461BF2B96800F23686 /* GoogleService-Info.plist in Resources */,
 				55F45F4C1BE07E0B00242F46 /* Assets.xcassets in Resources */,
 				55F45F4A1BE07E0B00242F46 /* Main.storyboard in Resources */,
 			);
@@ -537,10 +544,13 @@
 			baseConfigurationReference = 76DAFDF05157064A91ED71F6 /* Pods-MeeraNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kyaw Mong (7L38SV83JK)";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MeeraNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = meera.solution.in.MeeraNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = MeeraNews/Header.h;
 			};
 			name = Debug;
 		};
@@ -549,10 +559,13 @@
 			baseConfigurationReference = 03EC9B7D14B43560DC33E7BE /* Pods-MeeraNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kyaw Mong (7L38SV83JK)";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MeeraNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = meera.solution.in.MeeraNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = MeeraNews/Header.h;
 			};
 			name = Release;
 		};
@@ -560,6 +573,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kyaw Mong (7L38SV83JK)";
 				INFOPLIST_FILE = MeeraNewsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = meera.solution.in.MeeraNewsTests;
@@ -572,6 +586,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kyaw Mong (7L38SV83JK)";
 				INFOPLIST_FILE = MeeraNewsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = meera.solution.in.MeeraNewsTests;

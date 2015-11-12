@@ -11,6 +11,8 @@ import Parse
 import Bolts
 
 
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -26,6 +28,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
+        var configureError : NSError?
+        GGLContext.sharedInstance().configureWithError(&configureError)
+        assert(configureError === nil, "Error configuring Google services : \(configureError)")
+        var gai = GAI.sharedInstance()
+        gai.trackUncaughtExceptions = true
+        gai.logger.logLevel = GAILogLevel.Verbose
         
         return true
     }

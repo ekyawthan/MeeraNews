@@ -2,6 +2,35 @@ PODS:
   - Alamofire (2.0.0)
   - Bolts/Tasks (1.2.2)
   - DGElasticPullToRefresh (1.0.2)
+  - Google/Analytics (1.2.1):
+    - Google/Core
+    - GoogleAnalytics (~> 3.12)
+  - Google/Core (1.2.1):
+    - GoogleInterchangeUtilities (~> 1.0)
+    - GoogleNetworkingUtilities (~> 1.0)
+    - GoogleSymbolUtilities (~> 1.0)
+    - GoogleUtilities (~> 1.1)
+  - Google/SignIn (1.2.1):
+    - Google/Core
+    - GoogleSignIn (~> 2.0)
+  - GoogleAnalytics (3.14.0)
+  - GoogleAppUtilities (1.0.0):
+    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleAuthUtilities (1.0.1):
+    - GoogleNetworkingUtilities (~> 1.0)
+    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleInterchangeUtilities (1.1.0):
+    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleNetworkingUtilities (1.0.0):
+    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleSignIn (2.4.0):
+    - GoogleAppUtilities (~> 1.0)
+    - GoogleAuthUtilities (~> 1.0)
+    - GoogleNetworkingUtilities (~> 1.0)
+    - GoogleUtilities (~> 1.0)
+  - GoogleSymbolUtilities (1.0.3)
+  - GoogleUtilities (1.1.0):
+    - GoogleSymbolUtilities (~> 1.0.0)
   - Kanna (1.0.2)
   - Magic (2.0.0)
   - NVActivityIndicatorView (2.1)
@@ -16,6 +45,8 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - DGElasticPullToRefresh (from `https://github.com/gontovnik/DGElasticPullToRefresh.git`)
+  - Google/Analytics
+  - Google/SignIn
   - Kanna (from `https://github.com/tid-kijyun/Kanna.git`)
   - Magic
   - NVActivityIndicatorView (from `https://github.com/ninjaprox/NVActivityIndicatorView.git`)
@@ -69,6 +100,15 @@ SPEC CHECKSUMS:
   Alamofire: 2f13548b29d25a58ecd91c9225fb51493e2b782b
   Bolts: 20a2bd788273360cb1e31530dc19b8544eef2544
   DGElasticPullToRefresh: 49cc35f3509b46a58a8f45ae0165d0a8e0feccea
+  Google: fd33b5fa40fa3aaee5176de49c873a74e3d11dce
+  GoogleAnalytics: 9be1afdb8deeac4bb5f13ca7f7d3b9db2a1f43dc
+  GoogleAppUtilities: c01c6a5671e9da8b9d690fdaec5959d6c2aac699
+  GoogleAuthUtilities: 049ffd3a297cdffd271451b82fd4e75304f15ef3
+  GoogleInterchangeUtilities: d7f7174176fbcf9710f696f1acebad4dbd98ac03
+  GoogleNetworkingUtilities: 292992ab31b7b4ba32809a0e8b40e324cdfb2c0c
+  GoogleSignIn: 79929b51e6299c69f1197bbd9c7a1367d523ecd8
+  GoogleSymbolUtilities: 82ad9f93d3615244b3f4ce440f5ab2515e8b4f56
+  GoogleUtilities: 8ed9134debe11719097881711464752900668f10
   Kanna: 059afb193a9f8ea34f46cb55a8b11bf4257efad8
   Magic: f05ea8d27da5413cd780266ff0152bb9c028bfa9
   NVActivityIndicatorView: 84aa48f7ec1efbfd0645e9f469097d94c6f65417

@@ -14,6 +14,8 @@ target 'MeeraNews' do
 	pod 'SwiftMoment', :git => 'https://github.com/akosma/SwiftMoment.git'
      pod 'Parse'
      pod 'NVActivityIndicatorView', :git => 'https://github.com/ninjaprox/NVActivityIndicatorView.git'
+     pod 'Google/Analytics'
+     pod 'Google/SignIn'
 
 
 end
