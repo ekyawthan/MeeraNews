@@ -15,6 +15,8 @@ import SafariServices
 import RAMAnimatedTabBarController
 import Parse
 import NVActivityIndicatorView
+import Kanna
+import Async
 
 
 class NewsVC: UIViewController {
@@ -126,6 +128,9 @@ extension NewsVC : UITableViewDelegate, UITableViewDataSource {
                     cell.numberOfComments.text = "\(json["descendants"].intValue) comments"
                     cell.url = json["url"].stringValue
                     //moment().subtract(moejson["time"].doubleValue)
+                    
+                    
+                 
                     magic(moment(NSDate(timeIntervalSince1970: json["time"].doubleValue)))
                     self.localCachesTopStory[indexPath.row] = json
                 }
@@ -177,7 +182,7 @@ extension NewsVC : UITabBarControllerDelegate {
 extension NewsVC {
     func showLoading() {
         loadingActivityIndicator.hidden = false
-        self.topNewsTableView.alpha = 0.4
+        self.topNewsTableView.alpha = 0.1
         loadingActivityIndicator.startAnimation()
         
     }

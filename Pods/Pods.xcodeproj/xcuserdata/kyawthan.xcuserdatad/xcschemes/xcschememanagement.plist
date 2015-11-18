@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AsyncSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Bolts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,7 +77,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>016EA27C28C04FA1D1319CF8526709F1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>115824B7CB2E76E5ACB836A251E79404</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2A4898DDFDAF1A8DF9391011ADA1F2BB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3A81036767950315894F7FC8B5C4C372</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,17 +107,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>4E155FBB6070C868840C7A2BB6E75E85</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E87CDD14A5D7CB10976109FD3EB7581</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>708E01B006A9F88B3C13711562282B5E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>822045A63333739F45E54D270B6248C5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>895612ECE758E9EBBD878EB57F3A2477</key>
+		<key>75D3F19695A8AD4AAB7C4D526696FD12</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,22 +142,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C5B130CFF96F096F652D658808C174B2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>C9D4FC636433B837414659AA32997325</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D1C781A656AA9BD286F44BC0E86636A9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E13E6229888207E254BB7DBD4514FDC9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

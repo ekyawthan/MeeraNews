@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-MeeraNews/Alamofire.framework"
+  install_framework "Pods-MeeraNews/Async.framework"
   install_framework "Pods-MeeraNews/Bolts.framework"
   install_framework "Pods-MeeraNews/DGElasticPullToRefresh.framework"
   install_framework "Pods-MeeraNews/Kanna.framework"
@@ -99,6 +100,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-MeeraNews/Alamofire.framework"
+  install_framework "Pods-MeeraNews/Async.framework"
   install_framework "Pods-MeeraNews/Bolts.framework"
   install_framework "Pods-MeeraNews/DGElasticPullToRefresh.framework"
   install_framework "Pods-MeeraNews/Kanna.framework"

@@ -15,7 +15,8 @@ target 'MeeraNews' do
      pod 'Parse'
      pod 'NVActivityIndicatorView', :git => 'https://github.com/ninjaprox/NVActivityIndicatorView.git'
      pod 'Google/Analytics'
-     pod 'Google/SignIn'
+     pod "AsyncSwift" , :git => 'https://github.com/duemunk/Async.git'
+
 
 
 end

@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var configureError : NSError?
         GGLContext.sharedInstance().configureWithError(&configureError)
         assert(configureError === nil, "Error configuring Google services : \(configureError)")
-        var gai = GAI.sharedInstance()
+        let gai = GAI.sharedInstance()
         gai.trackUncaughtExceptions = true
         gai.logger.logLevel = GAILogLevel.Verbose
         
