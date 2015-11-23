@@ -18,7 +18,6 @@ import NVActivityIndicatorView
 import Kanna
 import Async
 
-
 class NewsVC: UIViewController {
     
     enum NewsVCTableCellType : String {
@@ -32,6 +31,11 @@ class NewsVC: UIViewController {
     var dataTopStory : [Int] = []
     
     var loadingActivityIndicator : NVActivityIndicatorView!
+    var currentOffSet = 0 {
+        didSet {
+            
+        }
+    }
     
 
     override func viewDidLoad() {
@@ -52,16 +56,14 @@ class NewsVC: UIViewController {
         topNewsTableView.dg_setPullToRefreshFillColor(UIColor(red: 255/255.0, green: 102/255.0, blue: 0/255.0, alpha: 1.0))
         topNewsTableView.dg_setPullToRefreshBackgroundColor(topNewsTableView.backgroundColor!)
         
-        loadingActivityIndicator = NVActivityIndicatorView(frame: CGRectMake(0, 0, 100, 100), type: .LineScale, color: UIColor.redColor())
+        loadingActivityIndicator = NVActivityIndicatorView(
+            frame: CGRectMake(0, 0, 120, 120),
+            type: .BallClipRotate,
+            color: UIColor.redColor())
         loadingActivityIndicator.center = self.view.center
         self.view.addSubview(loadingActivityIndicator)
         
      getTopStoryFromHackerNews()
-        
-        
-   
-        
-       
     }
     
     
@@ -71,9 +73,8 @@ class NewsVC: UIViewController {
             data , erorr in
             if let _ = data {
                 self.localCachesTopStory = Dictionary<Int, JSON>()
-                
-                
                 self.dataTopStory = data as! [Int]
+             
                 self.topNewsTableView.reloadData()
                 self.hideLoading()
             }
@@ -116,7 +117,7 @@ extension NewsVC : UITableViewDelegate, UITableViewDataSource {
             let model = localCachesTopStory[indexPath.row]
             cell.title.text = model!["title"].string ?? "Can not found Title"
             cell.numberOfComments.text = "\(model![""].int ?? 0) comments"
-            cell.numberOfPoint.text = "\(model!["descendants"].int ?? 0) points"
+            cell.numberOfPoint.text = "\(model!["descendants"].int ?? 0)"
             cell.url = model!["url"].string ?? "url not found"
         }else {
             NewsManager.getDetailonTopStory(newsID) {
@@ -124,19 +125,26 @@ extension NewsVC : UITableViewDelegate, UITableViewDataSource {
                 if let  _ = data {
                     let json = JSON(data!)
                     cell.title.text = json["title"].stringValue
-                    cell.numberOfPoint.text = "\(json["score"].intValue) Points"
+                    cell.numberOfPoint.text = "\(json["score"].intValue)"
                     cell.numberOfComments.text = "\(json["descendants"].intValue) comments"
-                    cell.url = json["url"].stringValue
-                    //moment().subtract(moejson["time"].doubleValue)
-                    
+                    let url = json["url"].stringValue
+//                    ReadabilityApi.parseHtml(url) {
+//                        response, error in
+//                        magic(response)
+//                    }
+                    cell.url = url
                     
                  
-                    magic(moment(NSDate(timeIntervalSince1970: json["time"].doubleValue)))
+                    //magic(moment(NSDate(timeIntervalSince1970: json["time"].doubleValue)))
                     self.localCachesTopStory[indexPath.row] = json
                 }
             }
             
         }
+        
+     
+        
+        magic("current index : \(indexPath.row)")
         
         return cell
     }
@@ -182,7 +190,7 @@ extension NewsVC : UITabBarControllerDelegate {
 extension NewsVC {
     func showLoading() {
         loadingActivityIndicator.hidden = false
-        self.topNewsTableView.alpha = 0.1
+        self.topNewsTableView.alpha = 0.01
         loadingActivityIndicator.startAnimation()
         
     }

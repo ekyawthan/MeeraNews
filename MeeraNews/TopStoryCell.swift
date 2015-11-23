@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 
 class TopStoryCell : UITableViewCell {
     
+    @IBOutlet weak var NewsLeadingImage: UIImageView!
     @IBOutlet weak var owenerAndcreated: UILabel!
     
     @IBOutlet weak var title: UILabel!
@@ -19,5 +21,11 @@ class TopStoryCell : UITableViewCell {
     @IBOutlet weak var numberOfPoint: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        let activity = NVActivityIndicatorView(frame: CGRectMake(0, 0, 80, 80), type: .BallBeat, color: UIColor.redColor())
+        
+        activity.center = NewsLeadingImage.center
+        self.contentView.addSubview(activity)
+        NewsLeadingImage.alpha = 0.3
+        activity.startAnimation()
     }
 }
