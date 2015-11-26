@@ -15,8 +15,9 @@ import SafariServices
 import RAMAnimatedTabBarController
 import Parse
 import NVActivityIndicatorView
-import Kanna
 import Async
+import ImageLoader
+
 
 class NewsVC: UIViewController {
     
@@ -28,16 +29,21 @@ class NewsVC: UIViewController {
     var localCachesTopStory : [Int : JSON] = Dictionary<Int , JSON>()
     
     @IBOutlet weak var topNewsTableView: UITableView!
-    var dataTopStory : [Int] = []
+    //var dataTopStory : [Int] = []
+    
+    var topStories : [NewsModel] = []
+    var topStoryIDS : [Int] = []
     
     var loadingActivityIndicator : NVActivityIndicatorView!
     var currentOffSet = 0 {
         didSet {
+            initializeData(currentOffSet, newsArray: self.topStoryIDS)
+            
             
         }
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
@@ -52,7 +58,7 @@ class NewsVC: UIViewController {
         topNewsTableView.dg_addPullToRefreshWithActionHandler({   () -> Void in
             self.topNewsTableView.dg_stopLoading()
             self.getTopStoryFromHackerNews()
-         })
+        })
         topNewsTableView.dg_setPullToRefreshFillColor(UIColor(red: 255/255.0, green: 102/255.0, blue: 0/255.0, alpha: 1.0))
         topNewsTableView.dg_setPullToRefreshBackgroundColor(topNewsTableView.backgroundColor!)
         
@@ -63,7 +69,7 @@ class NewsVC: UIViewController {
         loadingActivityIndicator.center = self.view.center
         self.view.addSubview(loadingActivityIndicator)
         
-     getTopStoryFromHackerNews()
+        getTopStoryFromHackerNews()
     }
     
     
@@ -72,14 +78,69 @@ class NewsVC: UIViewController {
         NewsManager.getTopStories {[unowned self]
             data , erorr in
             if let _ = data {
-                self.localCachesTopStory = Dictionary<Int, JSON>()
-                self.dataTopStory = data as! [Int]
-             
-                self.topNewsTableView.reloadData()
-                self.hideLoading()
+                self.topStoryIDS = data as! [Int]
+                self.topStories = []
+                self.currentOffSet = 10
             }
             
         }
+        
+    }
+    
+    
+    private func initializeData(currentOffSet : Int, newsArray : [Int] ) {
+        // every 5 offset , check if data exist in database otherwise get it from server
+        
+        for i in currentOffSet - 10..<currentOffSet {
+            let currentItemId = newsArray[i]
+            if let model = RealmHandler.getNewsItemWithID(currentItemId) {
+                self.topStories.append(model)
+                self.topNewsTableView.reloadData()
+                self.hideLoading()
+                
+            }else {
+                // get it form server
+                NewsManager.getDetailonTopStory(currentItemId) {
+                    data , error in
+                    if error == nil {
+                        self.topStories.append(data!)
+                        self.topNewsTableView.reloadData()
+                        self.hideLoading()
+                        
+                    }
+                }
+            }
+        }
+        let qos = QOS_CLASS_USER_INITIATED
+        dispatch_async(dispatch_get_global_queue(qos, 0)) {
+            var tmpNewsList : [NewsModel] = []
+            for i in 10..<self.topStoryIDS.count {
+                let nextId = self.topStoryIDS[i]
+                if let model = RealmHandler.getNewsItemWithID(nextId) {
+                    tmpNewsList.append(model)
+                }else {
+                    NewsManager.getDetailonTopStory(nextId) {
+                        data, error in
+                        if let _ = data {
+                            tmpNewsList.append(data!)
+                        }
+                        
+                    }
+                    
+                }
+                
+            }
+            if tmpNewsList.count > 0 {
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.topStories += tmpNewsList
+                    self.topNewsTableView.reloadData()
+                    
+                }
+            }
+        }
+        
+        
+        
         
     }
     
@@ -87,7 +148,7 @@ class NewsVC: UIViewController {
         super.viewWillAppear(animated)
         
         let name = "Pattern~ Home"
-       
+        
         let tracker = GAI.sharedInstance().defaultTracker
         tracker.set(kGAIScreenName, value: name)
         
@@ -96,9 +157,6 @@ class NewsVC: UIViewController {
         // [END screen_view_hit_swift]
     }
     
-   
-    
-
 
 }
 
@@ -110,59 +168,43 @@ extension NewsVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(NewsVCTableCellType.cellWithoutImage.rawValue, forIndexPath: indexPath) as! TopStoryCell
-        let newsID = dataTopStory[indexPath.row]
+        let newsID = topStories[indexPath.row]
+        cell.title.text = newsID.title
+        cell.source.text = newsID.author ?? ""
+        cell.url = newsID.url ?? ""
         
-        if localCachesTopStory[indexPath.row] != nil {
-            magic("existed at local")
-            let model = localCachesTopStory[indexPath.row]
-            cell.title.text = model!["title"].string ?? "Can not found Title"
-            cell.numberOfComments.text = "\(model![""].int ?? 0) comments"
-            cell.numberOfPoint.text = "\(model!["descendants"].int ?? 0)"
-            cell.url = model!["url"].string ?? "url not found"
+        cell.newsExerptLabel.text = newsID.excerpt?.truncate(50, trailing: ".....")
+        if let imageUrl = newsID.leadImageUrl {
+            cell.NewsLeadingImage.hidden = false
+            cell.exerptRightContraint.constant = 88
+            cell.titleRightContraint.constant = 88
+            cell.NewsLeadingImage.load(imageUrl, placeholder: nil, completionHandler: nil)
+            
         }else {
-            NewsManager.getDetailonTopStory(newsID) {
-                data , error in
-                if let  _ = data {
-                    let json = JSON(data!)
-                    cell.title.text = json["title"].stringValue
-                    cell.numberOfPoint.text = "\(json["score"].intValue)"
-                    cell.numberOfComments.text = "\(json["descendants"].intValue) comments"
-                    let url = json["url"].stringValue
-//                    ReadabilityApi.parseHtml(url) {
-//                        response, error in
-//                        magic(response)
-//                    }
-                    cell.url = url
-                    
-                 
-                    //magic(moment(NSDate(timeIntervalSince1970: json["time"].doubleValue)))
-                    self.localCachesTopStory[indexPath.row] = json
-                }
-            }
+            cell.NewsLeadingImage.hidden = true
+            cell.exerptRightContraint.constant = 8
+            cell.titleRightContraint.constant = 8
             
         }
-        
-     
-        
-        magic("current index : \(indexPath.row)")
-        
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.dataTopStory.count
+        return self.topStories.count
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! TopStoryCell
         if cell.url != "" {
-            let webVC = SFSafariViewController(URL: NSURL(string: cell.url)!)
-        
+            let webVC = SFSafariViewController(URL: NSURL(string: cell.url)!, entersReaderIfAvailable: true)
+            webVC.navigationController?.navigationBar.tintColor = UIColor.orangeColor()
+            webVC.navigationItem.rightBarButtonItem?.tintColor = UIColor.orangeColor()
+            
             webVC.delegate = self
             self.presentViewController(webVC, animated: true, completion: nil)
         }
-    
+        
     }
     
 }
@@ -195,7 +237,7 @@ extension NewsVC {
         
     }
     func hideLoading() {
-         self.topNewsTableView.alpha = 1.0
+        self.topNewsTableView.alpha = 1.0
         loadingActivityIndicator.stopAnimation()
         loadingActivityIndicator.hidden = true
         

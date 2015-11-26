@@ -149,98 +149,77 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvf-ET-HtT">
-                                                    <rect key="frame" x="34" y="65" width="207" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Microsoft surface out beat mac pro ...." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQf-FO-rgX">
+                                                    <rect key="frame" x="8" y="8" width="496" height="20"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="PTSerif-Regular" family="PT Serif" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fzn-WS-s7h">
+                                                    <rect key="frame" x="512" y="8" width="80" height="60"/>
+                                                    <animations/>
+                                                    <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="JXE-TI-YXq"/>
+                                                        <constraint firstAttribute="width" constant="80" id="Jmu-LK-aAK"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The new release of surface pro 4  can revolutionize pc industry!!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOe-lY-sSb">
+                                                    <rect key="frame" x="8" y="32" width="496" height="18"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <color key="textColor" red="0.22506953534031415" green="0.22506953534031415" blue="0.22506953534031415" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 days ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AB2-Bf-uXd">
+                                                    <rect key="frame" x="304" y="72" width="288" height="11.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="by www.bbc.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvf-ET-HtT">
+                                                    <rect key="frame" x="8" y="76" width="288" height="7.5"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                     <color key="textColor" red="0.52457826327433632" green="0.52457826327433632" blue="0.52457826327433632" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrT-dB-eRZ">
-                                                    <rect key="frame" x="8" y="8" width="18" height="19"/>
-                                                    <animations/>
-                                                    <attributedString key="attributedText">
-                                                        <fragment content="29">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" size="16" name="HelveticaNeue"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="END-RZ-CLs">
-                                                    <rect key="frame" x="404" y="65" width="79.5" height="15.5"/>
-                                                    <animations/>
-                                                    <attributedString key="attributedText">
-                                                        <fragment content="49 comments">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" size="13" name="HelveticaNeue"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fzn-WS-s7h">
-                                                    <rect key="frame" x="492" y="10" width="100" height="80"/>
-                                                    <animations/>
-                                                    <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="80" id="5pF-xm-we2"/>
-                                                        <constraint firstAttribute="width" constant="100" id="epj-61-4r7"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQf-FO-rgX">
-                                                    <rect key="frame" x="34" y="10" width="450" height="53"/>
-                                                    <animations/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="53" id="fKr-Ya-TpF"/>
-                                                    </constraints>
-                                                    <attributedString key="attributedText">
-                                                        <fragment content="Microsoft surface out beat mac pro ....">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" size="18" name="PTSerif-Regular"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstAttribute="topMargin" secondItem="rrT-dB-eRZ" secondAttribute="top" id="5nB-RV-ITV"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Fzn-WS-s7h" secondAttribute="trailing" id="DMX-ec-KX0"/>
-                                                <constraint firstItem="eQf-FO-rgX" firstAttribute="top" secondItem="HzH-I2-c7P" secondAttribute="topMargin" constant="2" id="EVf-6L-jnl"/>
-                                                <constraint firstItem="END-RZ-CLs" firstAttribute="top" secondItem="eQf-FO-rgX" secondAttribute="bottom" constant="2" id="KUB-nJ-KGw"/>
-                                                <constraint firstItem="END-RZ-CLs" firstAttribute="bottom" secondItem="rrT-dB-eRZ" secondAttribute="bottom" id="Kd3-bW-RQQ"/>
-                                                <constraint firstItem="eQf-FO-rgX" firstAttribute="leading" secondItem="Uvf-ET-HtT" secondAttribute="trailing" constant="-207" id="M4Y-Ig-7cq"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Uvf-ET-HtT" secondAttribute="bottom" constant="9.5" id="P15-wv-6A5"/>
-                                                <constraint firstItem="Fzn-WS-s7h" firstAttribute="leading" secondItem="END-RZ-CLs" secondAttribute="trailing" constant="8.5" id="TU7-4B-pSe"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="rrT-dB-eRZ" secondAttribute="leading" id="cmb-ll-dFO"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Fzn-WS-s7h" secondAttribute="bottom" constant="1.5" id="eaE-lX-jOr"/>
-                                                <constraint firstItem="Uvf-ET-HtT" firstAttribute="leading" secondItem="HzH-I2-c7P" secondAttribute="leadingMargin" constant="26" id="eya-3c-neH"/>
-                                                <constraint firstItem="Fzn-WS-s7h" firstAttribute="top" secondItem="HzH-I2-c7P" secondAttribute="topMargin" constant="2" id="fLj-bR-TYt"/>
-                                                <constraint firstItem="END-RZ-CLs" firstAttribute="height" secondItem="rrT-dB-eRZ" secondAttribute="height" id="gEs-go-j42"/>
-                                                <constraint firstItem="Fzn-WS-s7h" firstAttribute="leading" secondItem="eQf-FO-rgX" secondAttribute="trailing" constant="8" id="hub-Ok-ozg"/>
-                                                <constraint firstItem="eQf-FO-rgX" firstAttribute="leading" secondItem="HzH-I2-c7P" secondAttribute="leadingMargin" constant="26" id="zbK-Xk-mw4"/>
+                                                <constraint firstItem="Uvf-ET-HtT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VOe-lY-sSb" secondAttribute="bottom" constant="8" id="2eC-x9-jmc"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="VOe-lY-sSb" secondAttribute="trailing" constant="88" id="41m-91-JTI"/>
+                                                <constraint firstItem="AB2-Bf-uXd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Fzn-WS-s7h" secondAttribute="bottom" constant="4" id="7LS-Sx-gEM"/>
+                                                <constraint firstItem="Fzn-WS-s7h" firstAttribute="leading" secondItem="VOe-lY-sSb" secondAttribute="trailing" constant="8" id="BcF-xN-HiB"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Fzn-WS-s7h" secondAttribute="trailing" id="Gdw-dM-8IL"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="Uvf-ET-HtT" secondAttribute="leading" id="MbQ-Ll-nnQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eQf-FO-rgX" secondAttribute="trailing" constant="88" id="TIH-hG-k7e"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="VOe-lY-sSb" secondAttribute="leading" id="asw-fO-oKn"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="AB2-Bf-uXd" secondAttribute="trailing" id="eRR-CW-VzZ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Uvf-ET-HtT" secondAttribute="bottom" constant="8" id="fuj-UQ-PJT"/>
+                                                <constraint firstItem="AB2-Bf-uXd" firstAttribute="leading" secondItem="Uvf-ET-HtT" secondAttribute="trailing" constant="8" id="gB6-Sw-IM3"/>
+                                                <constraint firstAttribute="topMargin" secondItem="eQf-FO-rgX" secondAttribute="top" id="hO1-XU-Rmh"/>
+                                                <constraint firstItem="AB2-Bf-uXd" firstAttribute="width" secondItem="Uvf-ET-HtT" secondAttribute="width" id="kW2-w4-FNw"/>
+                                                <constraint firstItem="Fzn-WS-s7h" firstAttribute="leading" secondItem="eQf-FO-rgX" secondAttribute="trailing" constant="8" id="kXK-4Y-fd6"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="eQf-FO-rgX" secondAttribute="leading" id="rZb-gt-Bx6"/>
+                                                <constraint firstItem="Uvf-ET-HtT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Fzn-WS-s7h" secondAttribute="bottom" constant="8" id="spW-2d-lBW"/>
+                                                <constraint firstAttribute="topMargin" secondItem="Fzn-WS-s7h" secondAttribute="top" id="sqY-7k-bC3"/>
+                                                <constraint firstItem="VOe-lY-sSb" firstAttribute="top" secondItem="eQf-FO-rgX" secondAttribute="bottom" constant="4" id="tEe-5y-yA2"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="AB2-Bf-uXd" secondAttribute="bottom" constant="8" id="znv-Pk-Sfl"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="Kd3-bW-RQQ"/>
-                                                    <exclude reference="gEs-go-j42"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
                                             <outlet property="NewsLeadingImage" destination="Fzn-WS-s7h" id="y2Y-gW-X8K"/>
-                                            <outlet property="numberOfComments" destination="END-RZ-CLs" id="Ny3-i1-Yef"/>
-                                            <outlet property="numberOfPoint" destination="rrT-dB-eRZ" id="n2h-T1-JQv"/>
-                                            <outlet property="owenerAndcreated" destination="Uvf-ET-HtT" id="1YH-sc-Qxo"/>
+                                            <outlet property="exerptRightContraint" destination="41m-91-JTI" id="qfx-tm-F3l"/>
+                                            <outlet property="newsCreatedAt" destination="AB2-Bf-uXd" id="xJL-B4-yzq"/>
+                                            <outlet property="newsExerptLabel" destination="VOe-lY-sSb" id="fSk-gU-uHC"/>
+                                            <outlet property="publishedBy" destination="Uvf-ET-HtT" id="gWg-xp-B1E"/>
+                                            <outlet property="source" destination="Uvf-ET-HtT" id="x6m-nA-HRE"/>
                                             <outlet property="title" destination="eQf-FO-rgX" id="Ia0-sX-xxn"/>
+                                            <outlet property="titleRightContraint" destination="TIH-hG-k7e" id="esM-Gp-oma"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

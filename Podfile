@@ -16,6 +16,8 @@ target 'MeeraNews' do
      pod 'NVActivityIndicatorView', :git => 'https://github.com/ninjaprox/NVActivityIndicatorView.git'
      pod 'Google/Analytics'
      pod "AsyncSwift" , :git => 'https://github.com/duemunk/Async.git'
+     pod 'ImageLoader'
+
 
 
 

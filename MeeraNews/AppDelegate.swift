@@ -35,6 +35,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         gai.trackUncaughtExceptions = true
         gai.logger.logLevel = GAILogLevel.Verbose
         
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        
+        
         return true
     }
 

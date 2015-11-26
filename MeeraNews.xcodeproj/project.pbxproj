@@ -10,6 +10,13 @@
 		50EBEEBF67D49E302DBD1370 /* Pods_MeeraNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EBD6B011B4A211E54641FA /* Pods_MeeraNews.framework */; };
 		5513A9461BF2B96800F23686 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5513A9451BF2B96800F23686 /* GoogleService-Info.plist */; };
 		55184B5A1BFD9209007607CF /* ReadabilityApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55184B591BFD9209007607CF /* ReadabilityApi.swift */; };
+		55CF74E61C0514EC00080558 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CF74E41C0514EC00080558 /* Realm.framework */; };
+		55CF74E71C0514EC00080558 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 55CF74E41C0514EC00080558 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		55CF74E81C0514EC00080558 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CF74E51C0514EC00080558 /* RealmSwift.framework */; };
+		55CF74E91C0514EC00080558 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 55CF74E51C0514EC00080558 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		55CF74EF1C05156800080558 /* RealmModelNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CF74EE1C05156800080558 /* RealmModelNews.swift */; };
+		55CF74F11C05376C00080558 /* RealmHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CF74F01C05376C00080558 /* RealmHandler.swift */; };
+		55CF74F41C07812C00080558 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CF74F31C07812C00080558 /* StringExtension.swift */; };
 		55F45F451BE07E0B00242F46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F45F441BE07E0B00242F46 /* AppDelegate.swift */; };
 		55F45F4A1BE07E0B00242F46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F45F481BE07E0B00242F46 /* Main.storyboard */; };
 		55F45F4C1BE07E0B00242F46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F45F4B1BE07E0B00242F46 /* Assets.xcassets */; };
@@ -44,12 +51,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		55CF74EA1C0514EC00080558 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				55CF74E91C0514EC00080558 /* RealmSwift.framework in Embed Frameworks */,
+				55CF74E71C0514EC00080558 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		03EC9B7D14B43560DC33E7BE /* Pods-MeeraNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeeraNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeeraNews/Pods-MeeraNews.release.xcconfig"; sourceTree = "<group>"; };
 		19EBD6B011B4A211E54641FA /* Pods_MeeraNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeeraNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5513A9451BF2B96800F23686 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5513A9471BF2C08C00F23686 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		55184B591BFD9209007607CF /* ReadabilityApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadabilityApi.swift; sourceTree = "<group>"; };
+		55CF74E41C0514EC00080558 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		55CF74E51C0514EC00080558 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		55CF74EE1C05156800080558 /* RealmModelNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmModelNews.swift; sourceTree = "<group>"; };
+		55CF74F01C05376C00080558 /* RealmHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHandler.swift; sourceTree = "<group>"; };
+		55CF74F31C07812C00080558 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		55F45F411BE07E0B00242F46 /* MeeraNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeeraNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F45F441BE07E0B00242F46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55F45F491BE07E0B00242F46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,7 +106,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55CF74E61C0514EC00080558 /* Realm.framework in Frameworks */,
 				50EBEEBF67D49E302DBD1370 /* Pods_MeeraNews.framework in Frameworks */,
+				55CF74E81C0514EC00080558 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,9 +138,36 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		55CF74EB1C0514F400080558 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55CF74E41C0514EC00080558 /* Realm.framework */,
+				55CF74E51C0514EC00080558 /* RealmSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55CF74ED1C05154B00080558 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				55CF74EE1C05156800080558 /* RealmModelNews.swift */,
+				55CF74F01C05376C00080558 /* RealmHandler.swift */,
+			);
+			name = Realm;
+			sourceTree = "<group>";
+		};
+		55CF74F21C07811C00080558 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				55CF74F31C07812C00080558 /* StringExtension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		55F45F381BE07E0B00242F46 = {
 			isa = PBXGroup;
 			children = (
+				55CF74EB1C0514F400080558 /* Frameworks */,
 				55F45F431BE07E0B00242F46 /* MeeraNews */,
 				55F45F581BE07E0B00242F46 /* MeeraNewsTests */,
 				55F45F631BE07E0B00242F46 /* MeeraNewsUITests */,
@@ -167,6 +223,7 @@
 		55F45F721BE07EA800242F46 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				55CF74F21C07811C00080558 /* Extension */,
 				55F45F801BE1945D00242F46 /* Cell */,
 				55F45F771BE07EF300242F46 /* JobVC.swift */,
 				55F45F781BE07EF300242F46 /* NewsVC.swift */,
@@ -188,6 +245,7 @@
 		55F45F741BE07EB700242F46 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				55CF74ED1C05154B00080558 /* Realm */,
 				55F45F751BE07EE800242F46 /* NewsManager.swift */,
 				55F45FBD1BE31F3400242F46 /* JobsManager.swift */,
 				55F45FBF1BE31F6100242F46 /* ShowsManager.swift */,
@@ -226,6 +284,8 @@
 				55F45F3F1BE07E0B00242F46 /* Resources */,
 				543736CDA8B6CDA6F02CE235 /* Embed Pods Frameworks */,
 				4A5B3C5E1AF08C3529947E1F /* Copy Pods Resources */,
+				55CF74EA1C0514EC00080558 /* Embed Frameworks */,
+				55CF74EC1C05151C00080558 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -390,6 +450,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		55CF74EC1C05151C00080558 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\" ";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -403,6 +476,9 @@
 				55F45F7B1BE07EF300242F46 /* JobVC.swift in Sources */,
 				55F45F451BE07E0B00242F46 /* AppDelegate.swift in Sources */,
 				55F45FC01BE31F6100242F46 /* ShowsManager.swift in Sources */,
+				55CF74F11C05376C00080558 /* RealmHandler.swift in Sources */,
+				55CF74EF1C05156800080558 /* RealmModelNews.swift in Sources */,
+				55CF74F41C07812C00080558 /* StringExtension.swift in Sources */,
 				55F45FBE1BE31F3400242F46 /* JobsManager.swift in Sources */,
 				55F45F7C1BE07EF300242F46 /* NewsVC.swift in Sources */,
 				55184B5A1BFD9209007607CF /* ReadabilityApi.swift in Sources */,
@@ -551,6 +627,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MeeraNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = meera.solution.in.MeeraNews;
@@ -568,6 +648,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MeeraNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = meera.solution.in.MeeraNews;
